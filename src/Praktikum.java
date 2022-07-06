@@ -32,10 +32,10 @@ public class Praktikum {
             System.out.println("1 - Узнать год основания группы");
             System.out.println("2 - Добавить любимую группу");
             System.out.println("3 - Выйти из приложения");
-            int command = Integer.parseInt(scanner.next());
+            int command = Integer.parseInt(scanner.nextLine());
             if (command == 1) {
                 System.out.println("Введите название группы");
-                String keyGroup = scanner.next();
+                String keyGroup = scanner.nextLine();
                 Integer year = musicGroups.get(keyGroup);
                 System.out.println("Год основания " + keyGroup);
                 System.out.println(year);
@@ -43,10 +43,10 @@ public class Praktikum {
 
                 System.out.println("Добавьте свою любимую группу");
                 System.out.println("Введите её название");
-                String nameGroup = String.valueOf(scanner.next());
+                String nameGroup = String.valueOf(scanner.nextLine());
                 if (!musicGroups.containsKey(nameGroup)){
                     System.out.println("Введите год основания");
-                    int bornYear = Integer.parseInt(String.valueOf(scanner.next()));
+                    int bornYear = Integer.parseInt(String.valueOf(scanner.nextLine()));
                     musicGroups.put(nameGroup, bornYear);
                     System.out.println("Информация о группе " + nameGroup + " добавлена.");
                 } else {
